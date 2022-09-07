@@ -1,5 +1,4 @@
 from tkinter import *
-import math
 
 root = Tk()
 root.title("Pyt_Calculator")
@@ -17,14 +16,10 @@ def button_pyt():
         e.delete(0,END)
         e.insert(0, "Enter first num: ")
         run = run + 1
-        print(run)
-        print("First pyt")
     elif pyt == True:
         e.delete(0, END)
         e.insert(0, "Enter second num: ")
         run = run + 1
-        print(run)
-        print("Second pyt")
 
 
 def button_ent():
@@ -35,20 +30,14 @@ def button_ent():
     global run
     if run == 1:
         num1 = e.get() + " "
-        print(num1)
         num1 = num1[17:-1]
-        print(num1)
     elif run == 2:
         num2 = e.get() + " "
         num2 = num2[18:-1]
         num2 = float(num2)
         num1 = float(num1)
-        print(num1)
-        print(num2)
         num3 = num2**2 + num1**2
-        print(num3)
         num3 = str(num3 ** (1/2))
-        print(num3)
         e.delete(0, END)
         e.insert(0, num3)
 

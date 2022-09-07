@@ -4,7 +4,6 @@ root = Tk()
 root.title("Test_pyt")
 
 pyt = False
-run = 0
 
 def button_num(number):
     e.insert(END, number)
@@ -15,9 +14,6 @@ def button_pyt():
         global run
         e.delete(0,END)
         e.insert(0, "Enter first num: ")
-        run = run + 1
-        print(run)
-        print("First pyt")
         pyt = True
 
 
@@ -30,7 +26,6 @@ def button_ent():
         num1 = float(num1[17:-1])
         e.delete(0, END)
         e.insert(0, "Enter second num: ")
-        print("Second pyt")
         pyt = False
     elif pyt == False:
         num2 = e.get() + " "
@@ -38,7 +33,6 @@ def button_ent():
         num2 = float(num2[18:-1])
         num3 = str((num1**2 + num2**2)**(1/2))
         e.insert(0, num3)
-
 
 
 

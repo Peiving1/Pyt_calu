@@ -26,7 +26,17 @@ def log_calu():
         num1 = num + ","
         e.insert(0, num1)
 
+    def res():
+        global reset
+        e.delete(0, END)
+        e.insert(0, "Enter b: ")
+        reset.destroy()
+        enter = Button(logs, text="ENT", command=ent)
+        enter.grid(column=2, row=5)
+
+
     def ent():
+        global reset
         global num1
         ent = str(e.get())
 
@@ -43,6 +53,11 @@ def log_calu():
             e.delete(0, END)
             num3 = log(float(num1), float(num2))
             e.insert(0,num3)
+            enter.destroy()
+            reset = Button(logs, text="RES", command=res)
+            reset.grid(row=5, column=2)
+        else:
+            print("NA")
 
 
 
